@@ -8,7 +8,7 @@ def get_all_categories():
     """
     db = get_db()
     query = """
-        SELECT * FROM categoria ORDER BY nome
+        SELECT * FROM categorie ORDER BY nome
     """
     categories = db.execute(query).fetchall()
     return [dict(category) for category in categories]

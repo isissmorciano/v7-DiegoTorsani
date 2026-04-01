@@ -11,10 +11,10 @@ def index():
 
 
     # 1. Prendiamo i canali dal database
-    categoria: list[dict] = categoria_repository.get_all_categories()
+    categorie: list[dict] = categoria_repository.get_all_categories()
 
     # 2. Passiamo la variabile 'channels' al template
-    return render_template("index.html", categoria=categoria)
+    return render_template("index.html", categorie=categorie)
 
 @bp.route("/category/<int:id>")
 def category_detail(id):
@@ -28,3 +28,16 @@ def category_detail(id):
 
     # 3. Passiamo al template
     return render_template("categoria_detail.html", category=category, piatto=piatti)
+
+
+@bp.route("/crea_categoria")
+def crea_categoria(id):
+    pass
+
+@bp.route("/crea_piatto")
+def crea_piatto(id):
+    pass
+
+@bp.route("/ricerca")
+def ricerca(id):
+    pass
