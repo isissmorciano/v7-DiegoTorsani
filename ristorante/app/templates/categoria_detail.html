@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Categoria: {{ category['nome'] }}</h1>
+<p>Piatti: {{ piatti['name'] }} - Prezzo: {{ piatti['prezzo'] }}</p>
+
+<h2>Piatti</h2>
+{% for piatto in piatti %}
+<article>
+    <header>
+        <h3>{{ piatto['nome'] }}</h3>
+        <h3>{{ piatto['prezzo'] }}</h3>
+    </header>
+</article>
+<hr>
+{% endfor %}
+
+<a href="{{ url_for('main.index') }}">Torna alle categorie</a>
+{% endblock %}
