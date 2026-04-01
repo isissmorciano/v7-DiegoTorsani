@@ -1,3 +1,4 @@
+-- database: :memory:
 DROP TABLE IF EXISTS piatti;
 DROP TABLE IF EXISTS categorie;
 
